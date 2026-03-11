@@ -62,8 +62,11 @@ namespace Dnject
 
             void OnInjectRequested()
             {
-                std::wstring message = m_injectService.Inject(m_mainModel.Config().SelectedProcessName, m_mainModel.Config().SelectedFilePath);
-                m_mainModel.SetStatusMessage(message);
+                if (IsConfigValid())
+                {
+                    std::wstring message = m_injectService.Inject(m_mainModel.Config().SelectedProcessName, m_mainModel.Config().SelectedFilePath);
+                    m_mainModel.SetStatusMessage(message);
+                }
             }
 
             void ApplyConfig(const std::wstring& processName, const std::wstring& filePath)
@@ -94,7 +97,7 @@ namespace Dnject
 
                 if (m_mainModel.Config().SelectedFilePath.empty())
                 {
-                    m_mainModel.SetStatusMessage(L"File path is empty.");
+                    m_mainModel.SetStatusMessage(L"Dll is not specified.");
 
                     return false;
                 }
