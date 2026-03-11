@@ -1,4 +1,4 @@
-\# Dnject
+# Dnject
 
 
 
@@ -14,7 +14,7 @@ Simple windows tool for injecting dynamic-link libraries (DLLs) into running pro
 
 
 
-\## Cli
+## Cli
 
  Usage:
 
@@ -22,7 +22,7 @@ Simple windows tool for injecting dynamic-link libraries (DLLs) into running pro
 
 
 
-\## Gui
+## Gui
 
 
 
